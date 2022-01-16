@@ -9,12 +9,12 @@ import reactive from './reactive.js'
 export const obj = reactive({ 
 	name: 'ehh', 
 	deep: { 
-    count: 1  // nested property
-  } 
+		count: 1  // nested property
+	} 
 });
 
 export function increment() {
-  obj.deep.count++; // svelte will react to the change
+	obj.deep.count++; // svelte will react to the change
 }
 
 export const myArray = reactive([]);
@@ -24,8 +24,8 @@ export const myArray = reactive([]);
 ```svelte
 <!-- my-component.svelte -->
 <script>
-  import { obj, myArray, increment } from './my-store.js';
-		
+	import { obj, myArray, increment } from './my-store.js';
+	
 	function rename() {
 		obj.name = 'kek'; // works here too without the $ prefix
 	}
