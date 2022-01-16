@@ -51,3 +51,6 @@ export const myArray = reactive([]);
 </div>
 
 ```
+
+# TODO
+- [ ] handle object inside arrays/etc
