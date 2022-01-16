@@ -27,7 +27,12 @@ function reactive(obj, store = rootStore(obj)) {
 				return;
 			}
 
-			if (target[key] !== val) {
+			
+			const old = target[key];
+			if (old !== val) {
+				if (cache.has(old)) {
+					cache.remove(old);
+				}
 				target[key] = val;
 				store.refresh()
 			}
